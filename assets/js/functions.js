@@ -27,8 +27,8 @@ function logInfo() {
 
 function changeLogo() {
   let img = document.getElementById("logo");
-  let firstLogo = "http://127.0.0.1:5500/web-practice/dist/bootstrap/icons/bootstrap-fill.svg";
-  let secondLogo = "http://127.0.0.1:5500/web-practice/dist/bootstrap/icons/bootstrap.svg";
+  let firstLogo = "dist/bootstrap/icons/bootstrap-fill.svg";
+  let secondLogo = "dist/bootstrap/icons/bootstrap.svg";
   let getRandomInt = max => Math.floor(Math.random() * Math.floor(max));
   switch (getRandomInt(2)) {
     case 0:
@@ -38,6 +38,16 @@ function changeLogo() {
       img.src = secondLogo;
       break;
   }
+
+  let div = document.createElement("div");
+  div.id = "imgDiv";
+  let bigImg = document.createElement("img");
+  bigImg.src = img.src;
+  bigImg.setAttribute("height", document.body.clientHeight);
+  bigImg.setAttribute("weight", document.body.clientHeight);
+  div.append(bigImg);
+  div.setAttribute('onclick', "this.remove()");
+  document.body.prepend(div);
 }
 
 document.getElementById("searchButton").onclick = () => console.log("Сlick on search button.");
