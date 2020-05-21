@@ -1,0 +1,12 @@
+.random-bg-color() {
+  @r: `Math.random() * 255`;
+  @g: `Math.random() * 255`;
+  @b: `Math.random() * 255`;
+  @bg-color: (rgb(@r, @g, @b));
+}
+
+body {
+  .random-bg-color();
+  background-color: @bg-color;
+  font-size: 1.6rem;
+}
