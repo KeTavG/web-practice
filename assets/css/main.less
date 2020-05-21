@@ -1,3 +1,5 @@
+@default-bg-color: #fff;
+
 .random-bg-color() {
   @r: `Math.random() * 255`;
   @g: `Math.random() * 255`;
@@ -7,6 +9,18 @@
 
 body {
   .random-bg-color();
-  background-color: @bg-color;
+  background-color: @default-bg-color;
   font-size: 1.6rem;
+}
+
+footer {
+  font-size: 1rem;
+}
+
+.button-up {
+  width:64px; 
+  height:32px;
+  position:fixed;
+  bottom:16px;
+  right:16px;
 }

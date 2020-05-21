@@ -16,10 +16,10 @@
     </script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
   </head>
-  <body>
+  <body onload="logInfo()">
     <nav class="navbar navbar-expand-md navbar-light bg-info">
-      <a class="navbar-brand" href="#">
-        <img src="dist/bootstrap/icons/bootstrap-fill.svg" alt="" width="32" height="32" title="Bootstrap">
+      <a class="navbar-brand" href="#" name="logoLink">
+        <img src="dist/bootstrap/icons/bootstrap-fill.svg" alt="" width="32" height="32" title="Bootstrap" id="logo">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -49,7 +49,7 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn btn-primary my-2 my-sm-0" type="submit" id="searchButton">Search</button>
         </form>
       </div>
     </nav>
@@ -117,7 +117,7 @@
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
     </form>
 
     <div class="container-fluid">
@@ -164,22 +164,29 @@
       </div>
     </div>
 
+    <a class="btn btn-primary button-up" href="#logoLink" role="button">Up</a>
+
+    <hr>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">
+          Document: <i><script>document.write(document.title);</script></i>.
+          URL: <i><script>document.write(document.URL);</script></i>.
+          Last update: <i><script>document.write(document.lastModified);</script></i>.
+          © KeTavG, 2020.
+        </span>
+      </div>
+    </footer>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   
-    <script src="assets/js/lab6.js"></script>
-
-    <hr>
-    <font size="4">
-      Документ:
-      <i><script>document.write(document.title);</script></i><br>
-      URL:
-      <i><script>document.write(document.URL);</script></i><br>
-      Дата последнего обновления:
-      <i><script>document.write(document.lastModified);</script></i> 
-    </font>
+    <!-- <script src="assets/js/lab6.js"></script> -->
+    <!-- <script src="assets/js/lab8.js"></script> -->
+    <script src="assets/js/functions.js"></script>
   </body>
 </html>

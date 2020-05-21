@@ -17,9 +17,7 @@ function minSeqElem(seq) {
 }
 
 let seq = prompt("Enter a sequence of elements:", "3 1 2").split(' ')
-seq = seq.map(function (item) {
-  return parseInt(item);
-});
+seq = seq.map(item => parseInt(item));
 
 let secondMaxSeqElem = seq => seq.sort( (a, b) => a - b )[seq.length - 2];
 
