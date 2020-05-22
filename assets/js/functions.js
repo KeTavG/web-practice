@@ -48,6 +48,8 @@ function changeLogo() {
   div.append(bigImg);
   div.setAttribute('onclick', "this.remove()");
   document.body.prepend(div);
+
+  console.log(`${event.pageX}, ${event.pageY}`); // координаты
 }
 
 document.getElementById("searchButton").onclick = () => console.log("Сlick on search button.");

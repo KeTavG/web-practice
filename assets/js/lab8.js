@@ -36,5 +36,9 @@ Array.prototype.average = function() {
   return sum / this.length;
 }
 
+let func = User.bind(newObj);
+func("1203", "1232");
+console.log(newObj);
+
 let arr = [1, 2, 4, 8, 16, 32, 64];
 console.log(arr.average());
